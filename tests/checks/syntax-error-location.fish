@@ -85,7 +85,7 @@ $fish -c 'begin --notanoption; end'
 # CHECKERR: begin --notanoption; end
 # CHECKERR:       ^~~~~~~~~~~~^
 
-$fish -c 'begin --help'
+$fish -c 'function __fish_print_help; return 2; end; begin --help'
 # CHECKERR: fish: begin: missing man page
 # CHECKERR: Documentation may not be installed.
 # CHECKERR: `help begin` will show an online version

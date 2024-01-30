@@ -1,6 +1,11 @@
 #RUN: %fish %s
 # "Basic && and || support"
 
+# Ensure builtins help lookup fail
+function __fish_print_help
+    return 2
+end
+
 echo first && echo second
 echo third || echo fourth
 true && false

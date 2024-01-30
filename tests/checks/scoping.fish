@@ -1,6 +1,11 @@
 #RUN: %fish %s
 # Test scoping rules for functions and status
 
+# Ensure builtin help lookups fail
+function __fish_print_help
+    return 2
+end
+
 set -e smurf
 
 function setter
